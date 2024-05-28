@@ -1,37 +1,146 @@
-const mapChartRoot = am5.Root.new("map-chart-div");
-const mapChart = mapChartRoot.container.children.push(
-  am5map.MapChart.new(mapChartRoot, {
-    geoJSON: am5geodata_worldLow,
-    panX: "none",
-    panY: "none",
-    wheelX: "none",
-    wheelY: "none",
-    pinchZoom: false,
-  })
-);
+const totalImpressions = [
+  {
+    ImpressionCount: "146330",
+    customer_id: "2",
+    client_currency: "£",
+  },
+];
 
-var polygonSeries = mapChart.series.push(
-  am5map.MapPolygonSeries.new(mapChartRoot, {})
-);
+const totalClicks = [
+  {
+    ClickCount: "5400",
+    customer_id: "2",
+    client_currency: "£",
+  },
+];
 
-polygonSeries.mapPolygons.template.setAll({
-  tooltipText: "{name}: {value}",
-});
+const totalCtr = [
+  {
+    CtrCount: "3.6899",
+    customer_id: "2",
+    client_currency: "£",
+  },
+];
 
-// var tooltip = am5.Tooltip.new(mapChartRoot, {
-//   getFillFromSprite: false,
-//   tooltipText: "{name}: {value}",
-//   labelText: "[bold]{name}[/]\n\nImpressions: {value}",
-// });
+const clicksMonthlyTrend = [
+  {
+    log_date: 1716163200,
+    ClickCount: "852",
+    customer_id: "2",
+    client_currency: "£",
+    timegroup: "hourly",
+    formatted_log_date: "May 20, 2024 12:00 AM",
+  },
+  {
+    log_date: 1716249600,
+    ClickCount: "754",
+    customer_id: "2",
+    client_currency: "£",
+    timegroup: "hourly",
+    formatted_log_date: "May 21, 2024 12:00 AM",
+  },
+  {
+    log_date: 1716336000,
+    ClickCount: "751",
+    customer_id: "2",
+    client_currency: "£",
+    timegroup: "hourly",
+    formatted_log_date: "May 22, 2024 12:00 AM",
+  },
+  {
+    log_date: 1716422400,
+    ClickCount: "749",
+    customer_id: "2",
+    client_currency: "£",
+    timegroup: "hourly",
+    formatted_log_date: "May 23, 2024 12:00 AM",
+  },
+  {
+    log_date: 1716508800,
+    ClickCount: "769",
+    customer_id: "2",
+    client_currency: "£",
+    timegroup: "hourly",
+    formatted_log_date: "May 24, 2024 12:00 AM",
+  },
+  {
+    log_date: 1716595200,
+    ClickCount: "762",
+    customer_id: "2",
+    client_currency: "£",
+    timegroup: "hourly",
+    formatted_log_date: "May 25, 2024 12:00 AM",
+  },
+  {
+    log_date: 1716681600,
+    ClickCount: "762",
+    customer_id: "2",
+    client_currency: "£",
+    timegroup: "hourly",
+    formatted_log_date: "May 26, 2024 12:00 AM",
+  },
+];
 
-// tooltip.get("background").setAll({
-//   fill: am5.color(0xffffff),
-//   stroke: am5.color(0x000000),
-// });
+const ctrMonthlyTrend = [
+  {
+    log_date: 1716163200,
+    CtrCount: "4.3372",
+    customer_id: "2",
+    client_currency: "£",
+    timegroup: "hourly",
+    formatted_log_date: "May 20, 2024 12:00 AM",
+  },
+  {
+    log_date: 1716249600,
+    CtrCount: "4.0551",
+    customer_id: "2",
+    client_currency: "£",
+    timegroup: "hourly",
+    formatted_log_date: "May 21, 2024 12:00 AM",
+  },
+  {
+    log_date: 1716336000,
+    CtrCount: "4.4692",
+    customer_id: "2",
+    client_currency: "£",
+    timegroup: "hourly",
+    formatted_log_date: "May 22, 2024 12:00 AM",
+  },
+  {
+    log_date: 1716422400,
+    CtrCount: "3.1610",
+    customer_id: "2",
+    client_currency: "£",
+    timegroup: "hourly",
+    formatted_log_date: "May 23, 2024 12:00 AM",
+  },
+  {
+    log_date: 1716508800,
+    CtrCount: "3.5945",
+    customer_id: "2",
+    client_currency: "£",
+    timegroup: "hourly",
+    formatted_log_date: "May 24, 2024 12:00 AM",
+  },
+  {
+    log_date: 1716595200,
+    CtrCount: "3.3000",
+    customer_id: "2",
+    client_currency: "£",
+    timegroup: "hourly",
+    formatted_log_date: "May 25, 2024 12:00 AM",
+  },
+  {
+    log_date: 1716681600,
+    CtrCount: "3.2995",
+    customer_id: "2",
+    client_currency: "£",
+    timegroup: "hourly",
+    formatted_log_date: "May 26, 2024 12:00 AM",
+  },
+];
 
-// polygonSeries.set("tooltip", tooltip);
-
-const data = [
+const impressionsByState = [
   {
     region_id: "32474",
     name: "Unknown",
@@ -42,7 +151,7 @@ const data = [
   {
     region_id: "32485",
     name: "Texas",
-    ImpressionCount: "19210242",
+    ImpressionCount: "19231078",
     country: "US",
     client_currency: "£",
   },
@@ -405,47 +514,174 @@ const data = [
   },
 ];
 
-var legend = mapChart.children.push(
-  am5.Container.new(mapChartRoot, {
-    layout: mapChartRoot.verticalLayout,
-  })
-);
+const impressionsByAgeAndGender = [
+  {
+    gender: "female",
+    genderages_id: "76156",
+    age: "35-44",
+    ImpressionCount: "1660396",
+    client_currency: "£",
+  },
+  {
+    gender: "female",
+    genderages_id: "76173",
+    age: "18-24",
+    ImpressionCount: "322888",
+    client_currency: "£",
+  },
+  {
+    gender: "male",
+    genderages_id: "76174",
+    age: "18-24",
+    ImpressionCount: "428465",
+    client_currency: "£",
+  },
+  {
+    gender: "female",
+    genderages_id: "76175",
+    age: "25-34",
+    ImpressionCount: "1038817",
+    client_currency: "£",
+  },
+  {
+    gender: "male",
+    genderages_id: "76176",
+    age: "25-34",
+    ImpressionCount: "1342984",
+    client_currency: "£",
+  },
+  {
+    gender: "unknown",
+    genderages_id: "76177",
+    age: "25-34",
+    ImpressionCount: "13370",
+    client_currency: "£",
+  },
+  {
+    gender: "male",
+    genderages_id: "76179",
+    age: "35-44",
+    ImpressionCount: "1714914",
+    client_currency: "£",
+  },
+  {
+    gender: "unknown",
+    genderages_id: "76180",
+    age: "35-44",
+    ImpressionCount: "32427",
+    client_currency: "£",
+  },
+  {
+    gender: "female",
+    genderages_id: "76181",
+    age: "45-54",
+    ImpressionCount: "1804508",
+    client_currency: "£",
+  },
+  {
+    gender: "male",
+    genderages_id: "76182",
+    age: "45-54",
+    ImpressionCount: "1574111",
+    client_currency: "£",
+  },
+  {
+    gender: "unknown",
+    genderages_id: "76183",
+    age: "45-54",
+    ImpressionCount: "30426",
+    client_currency: "£",
+  },
+  {
+    gender: "female",
+    genderages_id: "76184",
+    age: "55-64",
+    ImpressionCount: "2299152",
+    client_currency: "£",
+  },
+  {
+    gender: "male",
+    genderages_id: "76185",
+    age: "55-64",
+    ImpressionCount: "1755253",
+    client_currency: "£",
+  },
+  {
+    gender: "unknown",
+    genderages_id: "76186",
+    age: "55-64",
+    ImpressionCount: "28242",
+    client_currency: "£",
+  },
+  {
+    gender: "female",
+    genderages_id: "76187",
+    age: "65+",
+    ImpressionCount: "3520979",
+    client_currency: "£",
+  },
+  {
+    gender: "male",
+    genderages_id: "76188",
+    age: "65+",
+    ImpressionCount: "2364188",
+    client_currency: "£",
+  },
+  {
+    gender: "unknown",
+    genderages_id: "76189",
+    age: "65+",
+    ImpressionCount: "41024",
+    client_currency: "£",
+  },
+  {
+    gender: "unknown",
+    genderages_id: "76254",
+    age: "18-24",
+    ImpressionCount: "7125",
+    client_currency: "£",
+  },
+  {
+    gender: "unknown",
+    genderages_id: "83558",
+    age: "Unknown",
+    ImpressionCount: "0",
+    client_currency: "£",
+  },
+];
 
-function createCircle() {
-  var circle = mapChart.children.push(
-    am5.Rectangle.new(mapChartRoot, {
-      radius: 50,
-      fill: am5.color(0x297373),
-      // centerX: am5.percent(0),
-      // centerY: am5.percent(0),
-    })
-  );
-  return circle;
-}
+const impressionByDevice = [
+  {
+    device_platform: "desktop",
+    ImpressionCount: "2086852",
+    client_currency: "£",
+  },
+  {
+    device_platform: "mobile_app",
+    ImpressionCount: "17871594",
+    client_currency: "£",
+  },
+  {
+    device_platform: "mobile_web",
+    ImpressionCount: "20369",
+    client_currency: "£",
+  },
+  {
+    device_platform: "unknown",
+    ImpressionCount: "454",
+    client_currency: "£",
+  },
+];
 
-const load = (country) => {
-  am5.net
-    .load(
-      `https://cdn.amcharts.com/lib/5/geodata/json/${country}Low.json`,
-      mapChart
-    )
-    .then((result) => {
-      const geoData = am5.JSONParser.parse(result.response);
-      console.log(geoData);
-      polygonSeries.setAll({
-        geoJSON: geoData,
-      });
-      polygonSeries.data.setAll([
-        ...data.map((e) => ({
-          id: geoData.features.find((f) => f.properties.name == e.name)?.id,
-          value: e.ImpressionCount,
-        })),
-        // ...geoData.features.map((e, index) => ({
-        //   id: e.id,
-        //   value: index,
-        // })),
-      ]);
-    });
-};
-
-load("usa");
+const chartPalette = [
+  "#0665a2",
+  "#ffc930",
+  "#e96455",
+  "#e11272",
+  "#57df7f",
+  "#820970",
+  "#7f2ccb",
+  "#52ffee",
+  "#4adf62",
+  "#009630",
+];

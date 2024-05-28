@@ -8,7 +8,9 @@
   </head>
 
   <body>
-    <div id="pie-chart-div"></div>
+    <div id="bar-chart-div" class="chart-div"></div>
+    <div id="line-chart-div" class="chart-div"></div>
+    <div id="pie-chart-div" class="chart-div"></div>
     <div class="dropdown">
       <button class="dropbtn">USA</button>
       <div id="country-dropdown" class="dropdown-content">
@@ -17,14 +19,19 @@
         <p class="dropdown-item">INDIA</p>
       </div>
     </div>
-    <div id="map-chart-div"></div>
+    <div id="map-chart-div" class="chart-div"></div>
     <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3-shape@3"></script>
     <script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
 
+    <script src="index.js"></script>
     <script src="mapChart.js"></script>
     <script src="pieChart.js"></script>
+    <script src="lineChart.js"></script>
+    <script src="barChart.js"></script>
     <script src="dropdown.js"></script>
   </body>
 </html>
