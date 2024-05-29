@@ -64,7 +64,6 @@ barChartXAxis.data.setAll(barChartData);
 
 const barChartSeries = barChart.series.push(
   am5xy.ColumnSeries.new(barChartRoot, {
-    name: name,
     xAxis: barChartXAxis,
     yAxis: barChartYAxis,
     valueYField: "ImpressionCount",
@@ -82,7 +81,6 @@ barChartSeries.data.setAll(
 
 const columnColor = (fill, target) => {
   if (target.dataItem) {
-    console.log(target.dataItem.dataContext.color);
     return target.dataItem.dataContext.color;
   }
   return fill;

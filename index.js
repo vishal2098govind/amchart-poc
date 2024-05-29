@@ -673,6 +673,65 @@ const impressionByDevice = [
   },
 ];
 
+const testBarChartDate = [
+  {
+    log_date: 1716249600,
+    Active_view_measurable_impressionCount: "13626",
+    customer_id: "2",
+    client_currency: "£",
+    timegroup: "hourly",
+    formatted_log_date: "May 21, 2024 12:00 AM",
+  },
+  {
+    log_date: 1716336000,
+    Active_view_measurable_impressionCount: "13483",
+    customer_id: "2",
+    client_currency: "£",
+    timegroup: "hourly",
+    formatted_log_date: "May 22, 2024 12:00 AM",
+  },
+  {
+    log_date: 1716422400,
+    Active_view_measurable_impressionCount: "13397",
+    customer_id: "2",
+    client_currency: "£",
+    timegroup: "hourly",
+    formatted_log_date: "May 23, 2024 12:00 AM",
+  },
+  {
+    log_date: 1716508800,
+    Active_view_measurable_impressionCount: "13347",
+    customer_id: "2",
+    client_currency: "£",
+    timegroup: "hourly",
+    formatted_log_date: "May 24, 2024 12:00 AM",
+  },
+  {
+    log_date: 1716595200,
+    Active_view_measurable_impressionCount: "13386",
+    customer_id: "2",
+    client_currency: "£",
+    timegroup: "hourly",
+    formatted_log_date: "May 25, 2024 12:00 AM",
+  },
+  {
+    log_date: 1716681600,
+    Active_view_measurable_impressionCount: "13021",
+    customer_id: "2",
+    client_currency: "£",
+    timegroup: "hourly",
+    formatted_log_date: "May 26, 2024 12:00 AM",
+  },
+  {
+    log_date: 1716768000,
+    Active_view_measurable_impressionCount: "461",
+    customer_id: "2",
+    client_currency: "£",
+    timegroup: "hourly",
+    formatted_log_date: "May 27, 2024 12:00 AM",
+  },
+];
+
 const chartPalette = [
   "#0665a2",
   "#ffc930",
